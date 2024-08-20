@@ -8,7 +8,7 @@ body {
     font-weight: 400;
     margin: 0;
     padding: 0;
-    background-color: #0B1215;
+    background-color: #0d0907;
     color: #000;
 }
 
@@ -52,7 +52,7 @@ body {
 }
 
 header {
-    background-color: #0B1215;
+    background-color: #0d0907;
     background-position: top;
     color: #FFFFFF;
     padding: 20px 0;
@@ -99,6 +99,12 @@ header h1 {
 
 nav {
     position: relative;
+}
+
+.navbar-logo {
+    width: 200px;
+    height: auto;
+
 }
 
 .menu-icon {
@@ -192,6 +198,15 @@ h2 {
     transition: all 0.5s;
 }
 
+
+.luma {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 25px rgba(255, 255, 255, 0.1);
+
+}
 /* Google Maps */
 iframe {
     width: 100%;
@@ -308,7 +323,7 @@ iframe {
         display: none;
         position:absolute;
         top: 0px;
-        background-image: url("img/BG Colorato@2x.png");
+        background-color: #0d0907;
         background-position: top;
         width: 100%;
         text-align: center;
@@ -359,7 +374,7 @@ iframe {
 }
 
 footer {
-    background-color: #0B1215;
+    background-color: #0d0907;
     background-position: top;
     color: #FFFFFF;
     padding: 20px 0;
