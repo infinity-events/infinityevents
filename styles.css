@@ -12,6 +12,7 @@ body {
     color: #000;
 }
 
+
 #countdown{
     text-align: center;
     color: #000;
@@ -102,7 +103,7 @@ nav {
 }
 
 .navbar-logo {
-    width: 200px;
+    width: 250px;
     height: auto;
 
 }
@@ -257,6 +258,13 @@ iframe {
     filter: brightness(0.2) invert(1);
 }
 
+.format-logo {
+
+    height: auto;
+    width: auto;
+    max-height: 350px;
+
+}
 
 
 @media screen and (max-width: 768px) {
