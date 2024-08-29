@@ -53,7 +53,7 @@ body {
 }
 
 header {
-    background-color: #13131A;
+    background-color: rgba(19, 19, 26, 0.6);
     background-position: top;
     color: #FFFFFF;
     padding: 20px 0;
@@ -61,6 +61,11 @@ header {
     position: relative;
     width: 100%;
     z-index: 2;
+    background-color: rgba(19, 19, 26, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: #fff;
+    position: relative;
 }
 
 header a{
@@ -149,6 +154,8 @@ nav ul li a {
 nav ul li a:hover {
     color: #13131A;
     transition: all 0.3s;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     background-color: #fff;
     border-radius: 10px;
 }
@@ -343,12 +350,12 @@ iframe {
 
     nav ul {
         display: none;
-        position:absolute;
         top: 0px;
-        background-color: #13131A;
         background-position: top;
         width: 100%;
         text-align: center;
+        background-color: transparent;
+        position: relative;
     }
 
     nav ul li {
@@ -365,6 +372,12 @@ iframe {
     nav ul li a:hover{
         border-radius: 0px;
     }
+}
+
+@media screen and (min-width: 769px) {
+    header {
+        backdrop-filter: blur(10px);
+        background-color: rgba(19, 19, 26, 0.8);
 }
 
 
