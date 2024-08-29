@@ -8,14 +8,14 @@ body {
     font-weight: 400;
     margin: 0;
     padding: 0;
-    background-color: #0d0907;
-    color: #000;
+    background-color: #13131A;
+    color: #13131A;
 }
 
 
 #countdown{
     text-align: center;
-    color: #000;
+    color: #13131A;
     padding: 20px;
     border: 1px solid red;
     display: none;
@@ -53,7 +53,7 @@ body {
 }
 
 header {
-    background-color: #0d0907;
+    background-color: #13131A;
     background-position: top;
     color: #FFFFFF;
     padding: 20px 0;
@@ -143,10 +143,11 @@ nav ul li a {
     padding: 5px 10px;
     z-index: 1;
     transition: all 0.3s;
+    border-radius: 10px;
 }
 
 nav ul li a:hover {
-    color: #000;
+    color: #13131A;
     transition: all 0.3s;
     background-color: #fff;
     border-radius: 10px;
@@ -170,7 +171,7 @@ h2 {
 
 
 .faq-item {
-    background-color: white;
+    background-color: rgb(51, 51, 51);
     border: 1px solid var(--accent-color);
     border-radius: 10px;
     margin-bottom: 1rem;
@@ -190,6 +191,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s;
+    color: white
 }
 
 .faq-answer {
@@ -197,8 +199,16 @@ h2 {
     padding: 1rem;
     border-top: 1px solid var(--accent-color);
     transition: all 0.5s;
+    color: white
 }
 
+a {
+    color: white;
+}
+
+a:hover {
+    color: rgb(223, 223, 223);
+}
 
 .luma {
     width: 100%;
@@ -259,13 +269,15 @@ iframe {
 }
 
 .format-logo {
-
     height: auto;
     width: auto;
     max-height: 350px;
-
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+.format-logo:hover {
+    transform: scale(1.07);
+}
 
 @media screen and (max-width: 768px) {
 
@@ -331,7 +343,7 @@ iframe {
         display: none;
         position:absolute;
         top: 0px;
-        background-color: #0d0907;
+        background-color: #13131A;
         background-position: top;
         width: 100%;
         text-align: center;
@@ -382,7 +394,7 @@ iframe {
 }
 
 footer {
-    background-color: #0d0907;
+    background-color: #13131A;
     background-position: top;
     color: #FFFFFF;
     padding: 20px 0;
@@ -492,4 +504,8 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+}
+
+.freccia-sottosopra {
+    transform: rotate(180deg);
 }
