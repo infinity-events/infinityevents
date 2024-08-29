@@ -188,4 +188,3 @@ document.addEventListener('DOMContentLoaded', () => {
         answer.style.display = 'none';
     });
 });
-
