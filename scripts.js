@@ -48,7 +48,7 @@ setInterval(changeText, 3000);
 
 //COUNTDOWN
 // Set the date for the festival
-const festivalDate = new Date("June 21, 2025 18:00:00").getTime();
+const festivalDate = new Date("October 12, 2024 10:00:00").getTime();
 
 // Update the countdown every second
 const countdownInterval = setInterval(function() {
@@ -67,7 +67,7 @@ const countdownInterval = setInterval(function() {
 
   if (timeLeft < 0) {
     clearInterval(countdownInterval);
-    document.getElementById("countdown").innerHTML = "VividFest is live!";
+    document.getElementById("countdown").innerHTML = "Infinity Events is live!";
   }
 }, 1000);
 

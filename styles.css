@@ -12,17 +12,52 @@ body {
     color: #13131A;
 }
 
-
-#countdown{
-    text-align: center;
-    color: #13131A;
-    padding: 20px;
-    border: 1px solid red;
-    display: none;
+.startEvent img{
+    margin-left: 41.5%;
+    width: 250px;
+    height: auto;
 }
 
-#countdown p{
-    border: 1px solid blue;
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.countdown-item {
+    margin: 0 20px;
+}
+
+.countdown-item span {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.countdown-item p {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .countdown{
+        margin-top: 100px;
+    }
+
+	.countdown-item span{
+        font-size: 30px;
+    }
+
+    .countdown-item p{
+        font-size: 10px;
+    }
+
+    .startEvent img{
+        width: 150px;
+        margin-left: 35%;
+    }
 }
 
 #time {
@@ -513,7 +548,6 @@ footer {
     margin: 0;
 }
 
-/* Responsive footer */
 @media screen and (max-width: 768px) {
     .footer-content {
         flex-direction: column;
@@ -523,4 +557,5 @@ footer {
 
 .freccia-sottosopra {
     transform: rotate(180deg);
+}
 }
