@@ -13,42 +13,19 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
 
         // Close the menu on mobile after clicking a link
         if (window.innerWidth <= 768) {
-            document.getElementById('menu').style.display = 'none';
-            document.getElementById('menu-icon').classList.remove('change');
+          document.getElementById('menu').style.display = 'none';
+          document.getElementById('menu-icon').classList.remove('change');
+          document.getElementById('bar1').classList.remove('change');
+          document.getElementById('bar2').classList.remove('change');
+          document.getElementById('bar3').classList.remove('change');
         }
     });
 });
 
-//DATE HEADER
-let texts = ["21-22 Giugno 2025", "Piazzale Gerani, Matelica"];
-let currentIndex = 0;
-
-function changeText() {
-    const textElement = document.getElementById("date");
-
-    // Fade out the current text
-    textElement.classList.add("hidden");
-    textElement.classList.add("animate__animated");
-    textElement.classList.add("animate__fadeIn");
-    textElement.classList.add("animate__fadeOut");
-
-    // After 1 second, change the text and fade it back in
-    setTimeout(() => {
-        currentIndex = (currentIndex + 1) % texts.length;
-        textElement.textContent = texts[currentIndex];
-        textElement.classList.remove("hidden");
-        textElement.classList.remove("animate__fadeOut");
-    }, 1000);
-} 
-
-// Start the text change loop with an initial delay
-setInterval(changeText, 3000);
-
-
 
 //COUNTDOWN
 // Set the date for the festival
-const festivalDate = new Date("October 12, 2024 10:00:00").getTime();
+const festivalDate = new Date("September 12, 2024 10:00:00").getTime();
 
 // Update the countdown every second
 const countdownInterval = setInterval(function() {
@@ -88,14 +65,20 @@ window.addEventListener('scroll', function() {
 
 
 document.getElementById('menu-icon').addEventListener('click', function() {
-    this.classList.toggle('change');
-    const menu = document.getElementById('menu');
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none';
-    } else {
-        menu.style.display = 'block';
-    }
-    menu.style.animation = 'fadeInOut 0.5s ease-in-out';
+  this.classList.toggle('change');
+  const menu = document.getElementById('menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+  bar1.classList.toggle('change');
+  bar2.classList.toggle('change');
+  bar3.classList.toggle('change');
+  if (menu.style.display === 'block') {
+      menu.style.display = 'none';
+  } else {
+      menu.style.display = 'block';
+  }
+  menu.style.animation = 'fadeInOut 0.5s ease-in-out';
 });
 
 
@@ -118,62 +101,6 @@ faqItems.forEach(item => {
         answer.style.animation = 'fadeInOut 0.5s ease-in-out';
     });
 });
-
-//ENTRY WORDS
-var words = document.getElementsByClassName('word');
-var wordArray = [];
-var currentWord = 0;
-
-words[currentWord].style.opacity = 1;
-for (var i = 0; i < words.length; i++) {
-  splitLetters(words[i]);
-}
-
-function changeWord() {
-  var cw = wordArray[currentWord];
-  var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
-  for (var i = 0; i < cw.length; i++) {
-    animateLetterOut(cw, i);
-  }
-  
-  for (var i = 0; i < nw.length; i++) {
-    nw[i].className = 'letter behind';
-    nw[0].parentElement.style.opacity = 1;
-    animateLetterIn(nw, i);
-  }
-  
-  currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
-}
-
-function animateLetterOut(cw, i) {
-  setTimeout(function() {
-    cw[i].className = 'letter out';
-  }, i*80);
-}
-
-function animateLetterIn(nw, i) {
-  setTimeout(function() {
-    nw[i].className = 'letter in';
-  }, 340+(i*80));
-}
-
-function splitLetters(word) {
-  var content = word.innerHTML;
-  word.innerHTML = '';
-  var letters = [];
-  for (var i = 0; i < content.length; i++) {
-    var letter = document.createElement('span');
-    letter.className = 'letter';
-    letter.innerHTML = content.charAt(i);
-    word.appendChild(letter);
-    letters.push(letter);
-  }
-  
-  wordArray.push(letters);
-}
-
-changeWord();
-setInterval(changeWord, 4000);
 
 // Responsive table for the schedule section
 const table = document.querySelector('table');
