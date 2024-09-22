@@ -67,7 +67,8 @@ const countdownInterval = setInterval(function() {
 
   if (timeLeft < 0) {
     clearInterval(countdownInterval);
-    document.getElementById("countdown").innerHTML = "Infinity Events is live!";
+    document.getElementById("startEvent").style.display = "none";
+    document.getElementById("postTimer").style.display = "block";
   }
 }, 1000);
 
