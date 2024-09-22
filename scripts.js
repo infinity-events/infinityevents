@@ -25,7 +25,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
 
 //COUNTDOWN
 // Set the date for the festival
-const festivalDate = new Date("September 12, 2024 10:00:00").getTime();
+const festivalDate = new Date("October 12, 2024 10:00:00").getTime();
 
 // Update the countdown every second
 const countdownInterval = setInterval(function() {
